@@ -6,6 +6,7 @@ using UnityEditor;
 public class MapEditor : EditorWindow
 {
     //static int tempInt = 1;
+    //public Map map;
 
     [MenuItem("Window/MapEditor")]
     public static void ShowWindow()
@@ -19,12 +20,12 @@ public class MapEditor : EditorWindow
 
         if (GUILayout.Button("load map"))
         {
-
+            MapCache.Instance.LoadMap();
         }
 
         if (GUILayout.Button("save map"))
         {
-
+            MapCache.Instance.SaveMap();
         }
     }
 }

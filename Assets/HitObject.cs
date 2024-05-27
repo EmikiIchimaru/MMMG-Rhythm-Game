@@ -4,7 +4,11 @@ using UnityEngine;
 public class HitObject
 {
     public int lane;
-    public int timing;
+    public int timePosition;
 
-    //objecttype
+    //
+    /* 
+    [HideInInspector] public Song song;
+    [HideInInspector] public float realTime { 
+        get { return Utility.TimePositionToRealtime(timePosition, song.bpm); } } */
 }

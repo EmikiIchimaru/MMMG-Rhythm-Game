@@ -12,4 +12,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 943987e8506ed3741addcfa8d6d6b5df, type: 3}
   m_Name: test map
   m_EditorClassIdentifier: 
-  hitObjects: []
+  hitObjects:
+  - lane: 0
+    timePosition: 4
+  - lane: 0
+    timePosition: 5
+  - lane: -3
+    timePosition: 6
+  - lane: 3
+    timePosition: 5
+  - lane: 0
+    timePosition: 8
+  - lane: -2
+    timePosition: 9
+  - lane: 2
+    timePosition: 10

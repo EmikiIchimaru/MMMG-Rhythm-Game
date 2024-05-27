@@ -10,4 +10,19 @@ public static class Utility
         isValid = (tempInt >= -3 && tempInt <= 3);
         return tempInt;
     }
+
+    public static float TimePositionToRealtime(int timePos, float bpm)
+    {
+        return timePos * 120f / bpm;
+    }
+
+    public static bool ShouldInstantiateNote(float realTimeHit, float currentTime, float approachRate)
+    {
+        //create an out parameter for minor offset adjustments
+        float tempARMultiplier = 0.05f;
+        Debug.Log((realTimeHit - currentTime - approachRate * tempARMultiplier) < 0);
+        return ((realTimeHit - currentTime - approachRate * tempARMultiplier) < 0);
+    }
+
+    
 }
