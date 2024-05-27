@@ -73,7 +73,9 @@ public class GameManager : Singleton<GameManager>
     {
         Vector3 tempSpawn = spawnPosition + note.lane * new Vector3(2f,0f,0f);
         GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.identity);
-        noteGO.transform.Rotate(90f,0,0);
+        noteGO.transform.Rotate(30f,0,0);
+        NoteData noteData = noteGO.GetComponent<NoteData>();
+        noteData.lane = note.lane;
 
     }
 }
