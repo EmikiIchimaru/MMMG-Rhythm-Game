@@ -1,19 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
-public class HitObject : MonoBehaviour
+[System.Serializable]
+public class HitObject
 {
-    public int column = 0;
-    //private float maxHeight = 5f;
-    //private float minHeight = -3.5f;
+    public int lane;
+    public int timing;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-
+    //objecttype
 }
