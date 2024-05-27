@@ -1,0 +1,30 @@
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using UnityEditor;
+
+public class MapEditor : EditorWindow
+{
+    //static int tempInt = 1;
+
+    [MenuItem("Window/MapEditor")]
+    public static void ShowWindow()
+    {
+        GetWindow<MapEditor>("Map Editor");
+    }
+
+    void OnGUI()
+    {
+        //EditorGUILayout.IntField("Integer", tempInt);
+
+        if (GUILayout.Button("load map"))
+        {
+
+        }
+
+        if (GUILayout.Button("save map"))
+        {
+
+        }
+    }
+}
