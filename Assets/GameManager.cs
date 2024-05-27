@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
     private int currentObjectIndex;
 
     [SerializeField] private GameObject notePrefab;
-    [SerializeField] private Vector3 spawnPosition = new Vector3(0, 1, 100);
+    [SerializeField] private Vector3 spawnPosition;
     
     // Start is called before the first frame update
     void Start()
@@ -29,20 +29,20 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         if (!isPlaying) { return; }
-        if (currentObjectIndex >= map.hitObjects.Length) 
+        if (currentObjectIndex >= map.notes.Length) 
         { 
             StopSong();
             return; 
         }
         while (true)
         {
-            float nextNoteRealtimeHit = Utility.TimePositionToRealtime(map.hitObjects[currentObjectIndex].timePosition, bpm);
+            float nextNoteRealtimeHit = Utility.TimePositionToRealtime(map.notes[currentObjectIndex].timePosition, bpm);
             Debug.Log($"next note rt hit: {nextNoteRealtimeHit}");
             if (Utility.ShouldInstantiateNote(nextNoteRealtimeHit, currentTrackTime, approachRate))
             {
-                CreateNote(map.hitObjects[currentObjectIndex]);
+                CreateNote(map.notes[currentObjectIndex]);
                 currentObjectIndex++;
-                if (currentObjectIndex >= map.hitObjects.Length) 
+                if (currentObjectIndex >= map.notes.Length) 
                 {
                     StopSong();
                     break;
@@ -59,19 +59,21 @@ public class GameManager : Singleton<GameManager>
     private void PlaySong()
     {
         isPlaying = true;
-        currentTrackTime = 0f;
+        currentTrackTime = -3f;
         currentObjectIndex = 0;
     }
 
     private void StopSong()
     {
-        Debug.Log($"completed notes: {map.hitObjects.Length}");
+        Debug.Log($"completed notes: {map.notes.Length}");
         isPlaying = false;
     }
 
-    private void CreateNote(HitObject hitObject)
+    private void CreateNote(Note note)
     {
-        Vector3 tempSpawn = spawnPosition + hitObject.lane * new Vector3(2f,0f,0f);
-        Instantiate(notePrefab, tempSpawn, Quaternion.identity);
+        Vector3 tempSpawn = spawnPosition + note.lane * new Vector3(2f,0f,0f);
+        GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.identity);
+        noteGO.transform.Rotate(90f,0,0);
+
     }
 }

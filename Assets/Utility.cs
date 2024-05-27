@@ -2,6 +2,7 @@ using UnityEngine;
 
 public static class Utility
 {
+    public static float baseSpeed = 20f;
     public static int CoorXToLane(float inputX, out bool isValid)
     {
     
@@ -13,15 +14,16 @@ public static class Utility
 
     public static float TimePositionToRealtime(int timePos, float bpm)
     {
-        return timePos * 120f / bpm;
+        return timePos * 60f / bpm;
     }
 
     public static bool ShouldInstantiateNote(float realTimeHit, float currentTime, float approachRate)
     {
         //create an out parameter for minor offset adjustments
-        float tempARMultiplier = 0.05f;
-        Debug.Log((realTimeHit - currentTime - approachRate * tempARMultiplier) < 0);
-        return ((realTimeHit - currentTime - approachRate * tempARMultiplier) < 0);
+
+        float travelTime = 140f / (baseSpeed * approachRate);
+        Debug.Log((realTimeHit - currentTime - travelTime) < 0);
+        return ((realTimeHit - currentTime - travelTime) < 0);
     }
 
     

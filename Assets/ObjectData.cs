@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class ObjectData : MonoBehaviour
+public class NoteData : MonoBehaviour
 {
-    
     public int lane = 0;
 }

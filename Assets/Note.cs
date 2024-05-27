@@ -1,7 +1,7 @@
 using UnityEngine;
 
 [System.Serializable]
-public class HitObject
+public class Note
 {
     public int lane;
     public int timePosition;
