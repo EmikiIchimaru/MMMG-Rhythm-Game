@@ -10,22 +10,38 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 943987e8506ed3741addcfa8d6d6b5df, type: 3}
-  m_Name: test map
+  m_Name: rhythm test
   m_EditorClassIdentifier: 
   notes:
   - lane: 0
+    timePosition: 1
+  - lane: 0
+    timePosition: 2
+  - lane: 0
+    timePosition: 3
+  - lane: 0
     timePosition: 4
-  - lane: 1
+  - lane: 0
     timePosition: 5
-  - lane: 2
+  - lane: 0
     timePosition: 6
-  - lane: 3
+  - lane: 0
+    timePosition: 7
+  - lane: 0
     timePosition: 8
-  - lane: -3
-    timePosition: 8
+  - lane: 0
+    timePosition: 9
   - lane: 0
     timePosition: 10
   - lane: 0
+    timePosition: 11
+  - lane: 0
     timePosition: 12
-  - lane: 2
-    timePosition: 12
+  - lane: 0
+    timePosition: 13
+  - lane: 0
+    timePosition: 14
+  - lane: 0
+    timePosition: 15
+  - lane: 0
+    timePosition: 16

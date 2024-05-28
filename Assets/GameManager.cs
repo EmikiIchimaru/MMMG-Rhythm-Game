@@ -9,15 +9,13 @@ public class GameManager : Singleton<GameManager>
     private float bpm { get { return song.bpm; } }
 
     public float approachRate = 5f;
-
-    public bool isPlaying;
-    private float currentTrackTime;
-
-    private int currentObjectIndex;
-
-    [SerializeField] private GameObject notePrefab;
     public float spawnDistance;
-    private Vector3 spawnPosition {get { return new Vector3(0f, 0.1f, spawnDistance); } }
+    public bool isPlaying;
+    public float currentTrackTime;
+    private int currentObjectIndex;
+    [SerializeField] private GameObject notePrefab;
+    private Vector3 spawnPosition { get { return new Vector3(0f, 0.1f, spawnDistance); } }
+    public List<Note> currentNotes = new List<Note>();
     
     // Start is called before the first frame update
     void Start()
@@ -30,11 +28,13 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         if (!isPlaying) { return; }
-        if (currentObjectIndex >= map.notes.Length) 
-        { 
-            StopSong();
-            return; 
-        }
+        if (currentTrackTime > song.duration) { StopSong(); }
+        if (currentObjectIndex < map.notes.Length) { InstantiateNotes(); }
+        currentTrackTime += Time.deltaTime;
+    }
+
+    private void InstantiateNotes()
+    {
         while (true)
         {
             float nextNoteRealtimeHit = Utility.TimePositionToRealtime(map.notes[currentObjectIndex].timePosition, bpm);
@@ -43,24 +43,19 @@ public class GameManager : Singleton<GameManager>
             {
                 CreateNote(map.notes[currentObjectIndex]);
                 currentObjectIndex++;
-                if (currentObjectIndex >= map.notes.Length) 
-                {
-                    StopSong();
-                    break;
-                }
+                break;
             }
             else
             {
                 break;
             }
         }
-        currentTrackTime += Time.deltaTime;
     }
 
     private void PlaySong()
     {
         isPlaying = true;
-        currentTrackTime = -3f;
+        currentTrackTime = -3f + 0.001f * song.offset;
         currentObjectIndex = 0;
     }
 
@@ -70,13 +65,19 @@ public class GameManager : Singleton<GameManager>
         isPlaying = false;
     }
 
-    private void CreateNote(Note note)
+    private void CreateNote(NoteStruct noteStruct)
     {
-        Vector3 tempSpawn = spawnPosition + note.lane * new Vector3(2f,0f,0f);
+        Vector3 tempSpawn = spawnPosition + noteStruct.lane * new Vector3(15f/7,0f,0f);
         GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.identity);
         noteGO.transform.Rotate(90f,0,0);
-        NoteData noteData = noteGO.GetComponent<NoteData>();
-        noteData.lane = note.lane;
-
+        Note note = noteGO.GetComponent<Note>();
+        note.lane = noteStruct.lane;
+        currentNotes.Add(note);
+        //add correction
     }
+
+/*     public void RemoveNote(NoteData noteData)
+    {
+        currentNotes.Remove(noteData);
+    } */
 }

@@ -1,0 +1,1 @@
+public enum TouchType { Tap, Hold, End, None }

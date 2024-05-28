@@ -1,14 +1,15 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Note
-{
-    public int lane;
-    public int timePosition;
 
-    //
-    /* 
-    [HideInInspector] public Song song;
-    [HideInInspector] public float realTime { 
-        get { return Utility.TimePositionToRealtime(timePosition, song.bpm); } } */
+public class Note : MonoBehaviour
+{
+    public int lane = 0;
+    public TouchType touchType = TouchType.Tap;
+    public void DestroyNote()
+    {
+        GameManager.Instance.currentNotes.Remove(this);
+        Destroy(gameObject);
+    }
 }

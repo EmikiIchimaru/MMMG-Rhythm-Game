@@ -712,11 +712,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   song: {fileID: 11400000, guid: 2050373e09a4542469e41f564a94cc38, type: 2}
-  approachRate: 2
+  approachRate: 1
+  spawnDistance: 25
   isPlaying: 0
+  currentTrackTime: 0
   notePrefab: {fileID: 3187025421824098991, guid: dbe8ace92a494c74389dc440200818fd,
     type: 3}
-  spawnDistance: 50
+  currentNotes: []
 --- !u!4 &1611150474
 Transform:
   m_ObjectHideFlags: 0
@@ -724,6 +726,53 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1611150472}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1969978961
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1969978963}
+  - component: {fileID: 1969978962}
+  m_Layer: 0
+  m_Name: Slowmo
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!114 &1969978962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969978961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1a406acadc908e49b3e734db5c0e157, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slowMotionScale: 0.4
+  normalTimeScale: 1
+  transitionDuration: 1
+--- !u!4 &1969978963
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1969978961}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
@@ -754,6 +803,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478707894425007793, guid: dbe8ace92a494c74389dc440200818fd,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9659258
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478707894425007793, guid: dbe8ace92a494c74389dc440200818fd,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.2588191
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478707894425007793, guid: dbe8ace92a494c74389dc440200818fd,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1478707894425007793, guid: dbe8ace92a494c74389dc440200818fd,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1478707894425007793, guid: dbe8ace92a494c74389dc440200818fd,
         type: 3}
@@ -790,10 +859,11 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 1611150474}
+  - {fileID: 604339800}
   - {fileID: 1246763762}
   - {fileID: 1138738731}
   - {fileID: 363519105}
   - {fileID: 6502224514206787510}
   - {fileID: 613465664}
   - {fileID: 1367485438}
-  - {fileID: 604339800}
+  - {fileID: 1969978963}
