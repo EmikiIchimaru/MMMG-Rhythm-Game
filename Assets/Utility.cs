@@ -3,12 +3,17 @@ using UnityEngine;
 public static class Utility
 {
     public static float baseSpeed = 20f;
-    public static int CoorXToLane(float inputX, out bool isValid)
+    public static float hitPanelWidth = 1505f;
+    public static float hitPanelMinY = -500f;
+    public static float hitPanelMaxY = -200f;
+
+    public static int LocalPointToLane(Vector2 inputPoint, out bool isValid)
     {
-    
-        float tempFloat = Mathf.Round((inputX + 960) /10f);
+        float inputX = inputPoint.x;
+        float inputY = inputPoint.y;
+        float tempFloat = Mathf.Round((inputX/hitPanelWidth)*7f);
         int tempInt =  (int) tempFloat;
-        isValid = (tempInt >= -3 && tempInt <= 3);
+        isValid = (tempInt >= -3 && tempInt <= 3) && (inputY >= hitPanelMinY && inputY <= hitPanelMaxY);
         return tempInt;
     }
 
@@ -21,8 +26,8 @@ public static class Utility
     {
         //create an out parameter for minor offset adjustments
 
-        float travelTime = 140f / (baseSpeed * approachRate);
-        Debug.Log((realTimeHit - currentTime - travelTime) < 0);
+        float travelTime = GameManager.Instance.spawnDistance / (baseSpeed * approachRate);
+        //Debug.Log((realTimeHit - currentTime - travelTime) < 0);
         return ((realTimeHit - currentTime - travelTime) < 0);
     }
 
