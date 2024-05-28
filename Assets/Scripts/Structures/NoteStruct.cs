@@ -1,11 +1,17 @@
 using UnityEngine;
 
 [System.Serializable]
-public struct NoteStruct
+public class NoteStruct
 {
     public int lane;
     public int timePosition;
 
+    // Constructor to initialize the fields
+    public NoteStruct(int lane, int timePosition)
+    {
+        this.lane = lane;
+        this.timePosition = timePosition;
+    }
     //
     /* 
     [HideInInspector] public Song song;

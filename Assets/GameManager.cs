@@ -11,6 +11,8 @@ public class GameManager : Singleton<GameManager>
     public float approachRate = 5f;
     public float spawnDistance;
     public bool isPlaying;
+
+    private bool hasSongStarted;
     public float currentTrackTime;
     private int currentObjectIndex;
     [SerializeField] private GameObject notePrefab;
@@ -28,6 +30,7 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         if (!isPlaying) { return; }
+        if (currentTrackTime > 0.001f * song.offset && !hasSongStarted) { StartSong(); }
         if (currentTrackTime > song.duration) { StopSong(); }
         if (currentObjectIndex < map.notes.Length) { InstantiateNotes(); }
         currentTrackTime += Time.deltaTime;
@@ -55,8 +58,16 @@ public class GameManager : Singleton<GameManager>
     private void PlaySong()
     {
         isPlaying = true;
-        currentTrackTime = -3f + 0.001f * song.offset;
+        hasSongStarted = false;
+        currentTrackTime = -3f;
         currentObjectIndex = 0;
+    }
+
+    private void StartSong()
+    {
+        Debug.Log($"play");
+        hasSongStarted = true;
+        AudioManager.Instance.Play("anime song");
     }
 
     private void StopSong()

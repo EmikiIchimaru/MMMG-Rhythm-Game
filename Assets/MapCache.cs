@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
 public class MapCache : Singleton<MapCache>
 {
@@ -24,5 +25,27 @@ public class MapCache : Singleton<MapCache>
     public void SaveMap()
     {
         Debug.Log("save map");
+        int tempLength = transform.childCount;  
+        NoteStruct[] tempNotes = new NoteStruct[tempLength];
+        for (int i = 0; i < tempLength; i++)
+        {
+            Transform child = transform.GetChild(i);        
+            
+            int intLane = (int) (0.5f * (child.position.x + 30f));
+            int intTime = (int) (1f * (child.position.z));
+            
+            tempNotes[i] = new NoteStruct(intLane, intTime);
+        }
+ 
+        // Create a new instance of the ScriptableObject
+        Map newMap = ScriptableObject.CreateInstance<Map>();
+
+        newMap.notes = tempNotes;
+        
+        // Save the duplicate as a new asset (optional)
+        string path = "Assets/new map.asset";
+        AssetDatabase.CreateAsset(newMap, path);
+        AssetDatabase.SaveAssets(); 
+    
     }
 }

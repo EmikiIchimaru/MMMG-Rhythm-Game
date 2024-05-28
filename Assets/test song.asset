@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 105f8774e826570499b4cb843f6d5d41, type: 3}
   m_Name: test song
   m_EditorClassIdentifier: 
-  map: {fileID: 11400000, guid: a8413fff043459d4c9b3644b26d8e86d, type: 2}
-  duration: 10
-  bpm: 100
+  map: {fileID: 11400000, guid: b5d8569b1af84e648bf9330f7daff7fe, type: 2}
+  duration: 30
+  bpm: 87
   offset: 154
