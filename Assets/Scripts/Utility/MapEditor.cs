@@ -30,5 +30,9 @@ public class MapEditor : EditorWindow
         {
             MapCache.Instance.CloseMap();
         }
+        if (GUILayout.Button("generate hold note"))
+        {
+            MapCache.Instance.GenerateHoldNotes();
+        }
     }
 }

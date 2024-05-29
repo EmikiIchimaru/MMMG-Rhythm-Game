@@ -16,7 +16,7 @@ public class GameManager : Singleton<GameManager>
     public float currentTrackTime;
     private int currentObjectIndex;
     [SerializeField] private GameObject notePrefab;
-    private Vector3 spawnPosition { get { return new Vector3(0f, 0.1f, spawnDistance); } }
+    private Vector3 spawnPosition { get { return new Vector3(0f, 0f, spawnDistance); } }
     public List<Note> currentNotes = new List<Note>();
     
     // Start is called before the first frame update
@@ -34,6 +34,18 @@ public class GameManager : Singleton<GameManager>
         if (currentTrackTime > song.duration) { StopSong(); }
         if (currentObjectIndex < map.notes.Length) { InstantiateNotes(); }
         currentTrackTime += Time.deltaTime;
+    }
+
+    public void GenerateHoldNote(Note note, bool isInPlayMode)
+    {
+        if (note.duration <= 0) { return; }
+        //float lengthScale = 4f;
+        //instantiate hold note
+        for (int i = 1; i < note.duration; i++)
+        {
+            //add intermediate notes
+        }
+
     }
 
     private void InstantiateNotes()
@@ -83,9 +95,13 @@ public class GameManager : Singleton<GameManager>
         noteGO.transform.Rotate(90f,0,0);
         Note note = noteGO.GetComponent<Note>();
         note.lane = noteStruct.lane;
+        GenerateHoldNote(note, true);
         currentNotes.Add(note);
         //add correction
     }
+
+
+
 
 /*     public void RemoveNote(NoteData noteData)
     {

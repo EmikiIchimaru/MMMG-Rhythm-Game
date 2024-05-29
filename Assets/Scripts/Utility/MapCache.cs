@@ -8,7 +8,13 @@ public class MapCache : Singleton<MapCache>
 {
     public Map map;
 
+    private float xOffset = 30f;
+
+    private float spacing = 2f;
+
     [SerializeField] private GameObject notePrefab;
+    [SerializeField] private GameObject holdPrefab;
+    [SerializeField] private GameObject tailPrefab;
     private Vector3 spawnPosition;
     public void LoadMap()
     {
@@ -16,11 +22,29 @@ public class MapCache : Singleton<MapCache>
         CloseMap();
         for (int i = 0; i < map.notes.Length; i++) 
         {
-            float tempX = map.notes[i].lane * 2f - 30f;
-            float tempZ = map.notes[i].timePosition * 2f;
+            GameObject tempPrefab = null;
+            float tempX = map.notes[i].lane * spacing - xOffset;
+            float tempZ = map.notes[i].timePosition * spacing;
             Vector3 tempSpawn = new Vector3(tempX, 0, tempZ);
-            GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.identity, transform);
+            switch (map.notes[i].touchType)
+            {
+                case TouchType.Tap:
+                    tempPrefab = notePrefab;
+                    break;
+                case TouchType.Hold:
+                    tempPrefab = holdPrefab;
+                    break;
+                case TouchType.End:
+                    tempPrefab = tailPrefab;
+                    break;
+            }
+            GameObject noteGO = Instantiate(tempPrefab, tempSpawn, Quaternion.identity, transform);
             noteGO.transform.Rotate(90f,0,0);
+            Note note = noteGO.GetComponent<Note>();
+            note.touchType = map.notes[i].touchType;
+            note.duration = map.notes[i].duration;
+            note.slide = map.notes[i].slide;
+            GameManager.Instance.GenerateHoldNote(note, false);
         }
     }
 
@@ -33,10 +57,13 @@ public class MapCache : Singleton<MapCache>
         {
             Transform child = transform.GetChild(i);        
             
-            int intLane = (int) (0.5f * (child.position.x + 30f));
+            int intLane = (int) ((child.position.x + xOffset)/spacing);
             int intTime = (int) (1f * (child.position.z));
-            
-            tempNotes[i] = new NoteStruct(intLane, intTime);
+            Note note = child.GetComponent<Note>();
+            TouchType touchType = note.touchType;
+            int intDuration = note.duration;
+            int intSlide = note.slide;
+            tempNotes[i] = new NoteStruct(intLane, intTime, touchType, intDuration, intSlide);
         }
  
         tempNotes = tempNotes.OrderBy(note => note.timePosition).ToArray();
@@ -59,6 +86,15 @@ public class MapCache : Singleton<MapCache>
         while(transform.childCount > 0)
         {
             DestroyImmediate(transform.GetChild(0).gameObject);
+        }
+    }
+
+    public void GenerateHoldNotes()
+    {
+        foreach (GameObject obj in Selection.gameObjects)
+        {
+            Note note = obj.GetComponent<Note>();
+            if (note != null) { GameManager.Instance.GenerateHoldNote(note, false); }
         }
     }
 }

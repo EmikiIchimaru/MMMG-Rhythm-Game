@@ -31,5 +31,6 @@ public static class Utility
         return ((realTimeHit - currentTime - travelTime) < 0);
     }
 
+
     
 }

@@ -14,34 +14,82 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notes:
   - lane: 0
-    timePosition: 2
-  - lane: -3
-    timePosition: 2
-  - lane: 0
     timePosition: 4
+    touchType: 0
+    duration: 0
+    slide: 0
   - lane: -3
     timePosition: 4
-  - lane: 0
-    timePosition: 6
-  - lane: -3
-    timePosition: 6
-  - lane: 0
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: -1
     timePosition: 8
-  - lane: -3
-    timePosition: 8
-  - lane: 0
-    timePosition: 10
-  - lane: -3
-    timePosition: 10
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: 1
+    timePosition: 12
+    touchType: 0
+    duration: 0
+    slide: 0
   - lane: 0
     timePosition: 12
-  - lane: -3
-    timePosition: 12
-  - lane: 0
-    timePosition: 14
-  - lane: -3
-    timePosition: 14
+    touchType: 0
+    duration: 0
+    slide: 0
   - lane: 0
     timePosition: 16
-  - lane: -3
-    timePosition: 16
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: 1
+    timePosition: 20
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: 0
+    timePosition: 20
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: 3
+    timePosition: 24
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: -2
+    timePosition: 24
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: 1
+    timePosition: 28
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: 0
+    timePosition: 28
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: -2
+    timePosition: 32
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: 0
+    timePosition: 32
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: -2
+    timePosition: 36
+    touchType: 0
+    duration: 0
+    slide: 0
+  - lane: -2
+    timePosition: 40
+    touchType: 0
+    duration: 0
+    slide: 0
