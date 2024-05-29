@@ -16,6 +16,7 @@ public class GameManager : Singleton<GameManager>
     public float currentTrackTime;
     private int currentObjectIndex;
     [SerializeField] private GameObject notePrefab;
+    [SerializeField] private GameObject tailPrefab;
     private Vector3 spawnPosition { get { return new Vector3(0f, 0f, spawnDistance); } }
     public List<Note> currentNotes = new List<Note>();
     
@@ -36,15 +37,18 @@ public class GameManager : Singleton<GameManager>
         currentTrackTime += Time.deltaTime;
     }
 
-    public void GenerateHoldNote(Note note, bool isInPlayMode)
+    public void GenerateHoldNote(Note note, float lengthScale, bool isInPlayMode)
     {
         if (note.duration <= 0) { return; }
-        //float lengthScale = 4f;
-        //instantiate hold note
-        for (int i = 1; i < note.duration; i++)
+        if (note.duration > 1)
         {
-            //add intermediate notes
+            for (int i = 1; i < note.duration-1; i++)
+            {
+                //add intermediate notes
+            }
         }
+        //add tail note
+        //setup lr
 
     }
 
@@ -95,7 +99,8 @@ public class GameManager : Singleton<GameManager>
         noteGO.transform.Rotate(90f,0,0);
         Note note = noteGO.GetComponent<Note>();
         note.lane = noteStruct.lane;
-        GenerateHoldNote(note, true);
+        float lengthScale = Utility.baseSpeed * approachRate * 1.5f;
+        GenerateHoldNote(note,lengthScale, true);
         currentNotes.Add(note);
         //add correction
     }

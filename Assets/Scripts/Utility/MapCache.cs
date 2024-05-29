@@ -44,7 +44,7 @@ public class MapCache : Singleton<MapCache>
             note.touchType = map.notes[i].touchType;
             note.duration = map.notes[i].duration;
             note.slide = map.notes[i].slide;
-            GameManager.Instance.GenerateHoldNote(note, false);
+            GameManager.Instance.GenerateHoldNote(note, spacing, false);
         }
     }
 
@@ -58,7 +58,7 @@ public class MapCache : Singleton<MapCache>
             Transform child = transform.GetChild(i);        
             
             int intLane = (int) ((child.position.x + xOffset)/spacing);
-            int intTime = (int) (1f * (child.position.z));
+            int intTime = (int) ((child.position.z)/spacing);
             Note note = child.GetComponent<Note>();
             TouchType touchType = note.touchType;
             int intDuration = note.duration;
@@ -94,7 +94,7 @@ public class MapCache : Singleton<MapCache>
         foreach (GameObject obj in Selection.gameObjects)
         {
             Note note = obj.GetComponent<Note>();
-            if (note != null) { GameManager.Instance.GenerateHoldNote(note, false); }
+            if (note != null) { GameManager.Instance.GenerateHoldNote(note, spacing, false); }
         }
     }
 }

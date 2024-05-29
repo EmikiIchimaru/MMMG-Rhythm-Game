@@ -21,6 +21,7 @@ public class NoteMovement : MonoBehaviour
     void Update()
     {
         perspectiveRate = 0.5f + 1f * (transform.position.z/GameManager.Instance.spawnDistance);
+        Mathf.Clamp(perspectiveRate, 0.5f, 1.5f);
         fallSpeed = Utility.baseSpeed * GameManager.Instance.approachRate * perspectiveRate;
         transform.position += new Vector3(0f, 0f, -fallSpeed * Time.deltaTime);
         if (transform.position.z < boundary)
