@@ -22,10 +22,13 @@ public class MapEditor : EditorWindow
         {
             MapCache.Instance.LoadMap();
         }
-
         if (GUILayout.Button("save map"))
         {
             MapCache.Instance.SaveMap();
+        }
+        if (GUILayout.Button("close map"))
+        {
+            MapCache.Instance.CloseMap();
         }
     }
 }

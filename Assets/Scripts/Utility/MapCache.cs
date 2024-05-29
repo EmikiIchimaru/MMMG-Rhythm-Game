@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEditor;
 
@@ -11,7 +12,8 @@ public class MapCache : Singleton<MapCache>
     private Vector3 spawnPosition;
     public void LoadMap()
     {
-        Debug.Log("load map");
+        //Debug.Log("load map");
+        CloseMap();
         for (int i = 0; i < map.notes.Length; i++) 
         {
             float tempX = map.notes[i].lane * 2f - 30f;
@@ -24,7 +26,7 @@ public class MapCache : Singleton<MapCache>
 
     public void SaveMap()
     {
-        Debug.Log("save map");
+        //Debug.Log("save map");
         int tempLength = transform.childCount;  
         NoteStruct[] tempNotes = new NoteStruct[tempLength];
         for (int i = 0; i < tempLength; i++)
@@ -37,6 +39,7 @@ public class MapCache : Singleton<MapCache>
             tempNotes[i] = new NoteStruct(intLane, intTime);
         }
  
+        tempNotes = tempNotes.OrderBy(note => note.timePosition).ToArray();
         // Create a new instance of the ScriptableObject
         Map newMap = ScriptableObject.CreateInstance<Map>();
 
@@ -47,5 +50,15 @@ public class MapCache : Singleton<MapCache>
         AssetDatabase.CreateAsset(newMap, path);
         AssetDatabase.SaveAssets(); 
     
+    }
+
+    public void CloseMap()
+    {
+        //Debug.Log("Close map");
+        int tempLength = transform.childCount;  
+        while(transform.childCount > 0)
+        {
+            DestroyImmediate(transform.GetChild(0).gameObject);
+        }
     }
 }
