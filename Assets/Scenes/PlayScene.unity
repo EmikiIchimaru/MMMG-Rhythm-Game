@@ -432,7 +432,7 @@ MonoBehaviour:
   sounds:
   - name: anime song
     clip: {fileID: 8300000, guid: 8954c8a91100bb84e9dfee53b556471e, type: 3}
-    volume: 1
+    volume: 0.359
     source: {fileID: 0}
 --- !u!4 &646130139
 Transform:
@@ -592,74 +592,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &1229480669
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 6952528539031912174, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_Name
-      value: Hold
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -32
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8147901999086645902, guid: 931e05e3dfa57584099d5d027739499e,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 931e05e3dfa57584099d5d027739499e, type: 3}
 --- !u!1 &1246763759
 GameObject:
   m_ObjectHideFlags: 0
@@ -799,7 +731,7 @@ MonoBehaviour:
   map: {fileID: 0}
   notePrefab: {fileID: 3187025421824098991, guid: dbe8ace92a494c74389dc440200818fd,
     type: 3}
-  holdPrefab: {fileID: 6952528538071948339}
+  holdPrefab: {fileID: 0}
   tailPrefab: {fileID: 0}
 --- !u!1 &1611150472
 GameObject:
@@ -831,11 +763,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   song: {fileID: 11400000, guid: 2050373e09a4542469e41f564a94cc38, type: 2}
-  approachRate: 1
-  spawnDistance: 25
+  approachRate: 2
+  spawnDistance: 50
   isPlaying: 0
   currentTrackTime: 0
   notePrefab: {fileID: 3187025421824098991, guid: dbe8ace92a494c74389dc440200818fd,
+    type: 3}
+  holdPrefab: {fileID: 6952528539031912174, guid: 931e05e3dfa57584099d5d027739499e,
     type: 3}
   tailPrefab: {fileID: 3187025421824098991, guid: 36f5ced0a1679b4498dc484b68e1a776,
     type: 3}
@@ -970,17 +904,12 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 0}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dbe8ace92a494c74389dc440200818fd, type: 3}
---- !u!1 &6952528538071948339 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6952528539031912174, guid: 931e05e3dfa57584099d5d027739499e,
-    type: 3}
-  m_PrefabInstance: {fileID: 1229480669}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -995,4 +924,3 @@ SceneRoots:
   - {fileID: 613465664}
   - {fileID: 6502224514206787510}
   - {fileID: 1969978963}
-  - {fileID: 1229480669}

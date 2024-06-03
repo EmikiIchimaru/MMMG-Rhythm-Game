@@ -16,8 +16,9 @@ public class GameManager : Singleton<GameManager>
     public float currentTrackTime;
     private int currentObjectIndex;
     [SerializeField] private GameObject notePrefab;
+    [SerializeField] private GameObject holdPrefab;
     [SerializeField] private GameObject tailPrefab;
-    private Vector3 spawnPosition { get { return new Vector3(0f, 0f, spawnDistance); } }
+    //private Vector3 spawnPosition { get { return new Vector3(0f, 0f, spawnDistance); } }
     public List<Note> currentNotes = new List<Note>();
     
     // Start is called before the first frame update
@@ -39,17 +40,39 @@ public class GameManager : Singleton<GameManager>
 
     public void GenerateHoldNote(Note note, float lengthScale, bool isInPlayMode)
     {
-        if (note.duration <= 0) { return; }
-        if (note.duration > 1)
+        Debug.Log($"{lengthScale}");
+        //Transform[] notes = new Transform[duration+1];
+        //notes[0] = transform;
+        
+        for (int i = 1; i <= note.duration; i++)
         {
-            for (int i = 1; i < note.duration-1; i++)
+            TouchType touchType;
+            Vector3 newPos;
+            GameObject holdNoteGO;
+            if (i < note.duration)
             {
-                //add intermediate notes
+                touchType = TouchType.Hold;
+                newPos = new Vector3(note.transform.position.x, 0, transform.position.z + i * lengthScale);
+                holdNoteGO = InstantiateGO(touchType, newPos);//add intermediate notes
+                //holdNoteGO.transform.Rotate(90f,0,0);
+            }
+            else
+            {
+                touchType = TouchType.End;
+                newPos = new Vector3(note.transform.position.x, 0, transform.position.z + i * lengthScale);
+                holdNoteGO = InstantiateGO(touchType, newPos);
+                //holdNoteGO.transform.Rotate(90f,0,0);
+                holdNoteGO.GetComponent<NoteTail>().headTransform = note.transform;
+
             }
         }
-        //add tail note
-        //setup lr
+    }
 
+    public GameObject InstantiateGO(TouchType touchType, Vector3 position)
+    {
+        GameObject prefab = TouchTypeToGO(touchType);
+        GameObject prefabGO = Instantiate(prefab, position, Quaternion.Euler(90,0,0));
+        return prefabGO;
     }
 
     private void InstantiateNotes()
@@ -81,7 +104,7 @@ public class GameManager : Singleton<GameManager>
 
     private void StartSong()
     {
-        Debug.Log($"play");
+        //Debug.Log($"play");
         hasSongStarted = true;
         AudioManager.Instance.Play("anime song");
     }
@@ -94,17 +117,33 @@ public class GameManager : Singleton<GameManager>
 
     private void CreateNote(NoteStruct noteStruct)
     {
-        Vector3 tempSpawn = spawnPosition + noteStruct.lane * new Vector3(15f/7,0f,0f);
-        GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.identity);
-        noteGO.transform.Rotate(90f,0,0);
+        Vector3 tempSpawn = new Vector3(noteStruct.lane * 15f/7, 0f, spawnDistance); //spawnPosition + new Vector3(,0f,0f);
+        GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.Euler(90,0,0));
+        //noteGO.transform.Rotate(90f,0,0);
         Note note = noteGO.GetComponent<Note>();
         note.lane = noteStruct.lane;
+        note.duration = noteStruct.duration;
         float lengthScale = Utility.baseSpeed * approachRate * 1.5f;
-        GenerateHoldNote(note,lengthScale, true);
+        GenerateHoldNote(note, lengthScale, true);
         currentNotes.Add(note);
         //add correction
     }
 
+    private GameObject TouchTypeToGO(TouchType touchType)
+    {
+        switch (touchType)
+        {
+            case TouchType.Tap:
+                return notePrefab;
+            case TouchType.Hold:
+                return holdPrefab;
+            case TouchType.End:
+                return tailPrefab;
+            default:
+                Debug.Log("touchtype to GO null");
+                return null;
+        }
+    }
 
 
 

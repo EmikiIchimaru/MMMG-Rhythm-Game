@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: new map
   m_EditorClassIdentifier: 
   notes:
-  - lane: 0
+  - lane: 1
     timePosition: 2
     touchType: 0
-    duration: 0
+    duration: 4
     slide: 0
   - lane: 0
     timePosition: 4

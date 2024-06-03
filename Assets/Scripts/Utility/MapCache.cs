@@ -22,11 +22,11 @@ public class MapCache : Singleton<MapCache>
         CloseMap();
         for (int i = 0; i < map.notes.Length; i++) 
         {
-            GameObject tempPrefab = null;
+            //GameObject tempPrefab = null;
             float tempX = map.notes[i].lane * spacing - xOffset;
             float tempZ = map.notes[i].timePosition * spacing;
             Vector3 tempSpawn = new Vector3(tempX, 0, tempZ);
-            switch (map.notes[i].touchType)
+            /* switch (map.notes[i].touchType)
             {
                 case TouchType.Tap:
                     tempPrefab = notePrefab;
@@ -37,14 +37,15 @@ public class MapCache : Singleton<MapCache>
                 case TouchType.End:
                     tempPrefab = tailPrefab;
                     break;
-            }
-            GameObject noteGO = Instantiate(tempPrefab, tempSpawn, Quaternion.identity, transform);
-            noteGO.transform.Rotate(90f,0,0);
+            } */
+            GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.Euler(90,0,0), transform);
+            //noteGO.transform.Rotate(90f,0,0);
             Note note = noteGO.GetComponent<Note>();
+            note.lane = map.notes[i].lane;
             note.touchType = map.notes[i].touchType;
             note.duration = map.notes[i].duration;
             note.slide = map.notes[i].slide;
-            GameManager.Instance.GenerateHoldNote(note, spacing, false);
+            //note.GenerateHoldNote(spacing, false);
         }
     }
 
@@ -65,7 +66,7 @@ public class MapCache : Singleton<MapCache>
             int intSlide = note.slide;
             tempNotes[i] = new NoteStruct(intLane, intTime, touchType, intDuration, intSlide);
         }
- 
+        //use system linq to sort the array
         tempNotes = tempNotes.OrderBy(note => note.timePosition).ToArray();
         // Create a new instance of the ScriptableObject
         Map newMap = ScriptableObject.CreateInstance<Map>();
