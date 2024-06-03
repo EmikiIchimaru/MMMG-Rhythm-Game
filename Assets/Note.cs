@@ -9,6 +9,7 @@ public class Note : MonoBehaviour
     public TouchType touchType = TouchType.Tap;
     public int duration = 0;
     public int slide = 0;
+    public float realtimeHit;
 
     public void DestroyNote()
     {

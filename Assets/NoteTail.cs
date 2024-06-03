@@ -4,9 +4,10 @@ using UnityEngine;
 
 public class NoteTail : MonoBehaviour
 {
-    private LineRenderer lr;
+    
     public Transform headTransform;
-
+    private LineRenderer lr;
+    
     void Awake()
     { 
         lr = GetComponent<LineRenderer>();
@@ -21,7 +22,7 @@ public class NoteTail : MonoBehaviour
     {
         lr.SetPosition(0, transform.position);
         lr.SetPosition(1, headTransform.position);
-        Debug.Log($"{headTransform.position}");
+        //Debug.Log($"{headTransform.position}");
         /* for (int i = 0; i < duration; i++)
         {
             lr.SetPosition(i, notes[i].position);

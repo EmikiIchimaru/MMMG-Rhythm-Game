@@ -17,16 +17,22 @@ public static class Utility
         return tempInt;
     }
 
-    public static float TimePositionToRealtime(int timePos, float bpm)
+    public static float GetBaseTimeUnit(float bpm)
     {
-        return timePos * 60f / bpm;
+        return 30f / bpm;
     }
 
-    public static bool ShouldInstantiateNote(float realTimeHit, float currentTime, float approachRate)
+    public static float TimePositionToRealtime(int timePos, float bpm, float offset)
+    {
+        return timePos * 30f / bpm + offset;
+    }
+
+    public static bool ShouldInstantiateNote(float realTimeHit, float currentTime, out float actualSpawnDistance)
     {
         //create an out parameter for minor offset adjustments
 
-        float travelTime = GameManager.Instance.spawnDistance / (baseSpeed * approachRate);
+        float travelTime = GameManager.Instance.spawnDistance / (baseSpeed * GameManager.Instance.approachRate);
+        actualSpawnDistance = (realTimeHit - currentTime) * (baseSpeed * GameManager.Instance.approachRate);
         //Debug.Log((realTimeHit - currentTime - travelTime) < 0);
         return ((realTimeHit - currentTime - travelTime) < 0);
     }

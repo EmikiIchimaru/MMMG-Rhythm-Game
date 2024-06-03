@@ -32,7 +32,7 @@ public class GameManager : Singleton<GameManager>
     void Update()
     {
         if (!isPlaying) { return; }
-        if (currentTrackTime > 0.001f * song.offset && !hasSongStarted) { StartSong(); }
+        if (currentTrackTime > 0 && !hasSongStarted) { StartSong(); }
         if (currentTrackTime > song.duration) { StopSong(); }
         if (currentObjectIndex < map.notes.Length) { InstantiateNotes(); }
         currentTrackTime += Time.deltaTime;
@@ -40,7 +40,7 @@ public class GameManager : Singleton<GameManager>
 
     public void GenerateHoldNote(Note note, float lengthScale, bool isInPlayMode)
     {
-        Debug.Log($"{lengthScale}");
+        //Debug.Log($"{lengthScale}");
         //Transform[] notes = new Transform[duration+1];
         //notes[0] = transform;
         
@@ -52,20 +52,21 @@ public class GameManager : Singleton<GameManager>
             if (i < note.duration)
             {
                 touchType = TouchType.Hold;
-                newPos = new Vector3(note.transform.position.x, 0, transform.position.z + i * lengthScale);
+                newPos = new Vector3(note.transform.position.x, 0, note.transform.position.z + i * lengthScale);
                 holdNoteGO = InstantiateGO(touchType, newPos);//add intermediate notes
-                //holdNoteGO.transform.Rotate(90f,0,0);
             }
             else
             {
                 touchType = TouchType.End;
-                newPos = new Vector3(note.transform.position.x, 0, transform.position.z + i * lengthScale);
+                newPos = new Vector3(note.transform.position.x, 0, note.transform.position.z + i * lengthScale);
                 holdNoteGO = InstantiateGO(touchType, newPos);
-                //holdNoteGO.transform.Rotate(90f,0,0);
                 holdNoteGO.GetComponent<NoteTail>().headTransform = note.transform;
-
             }
+
+            Note newNote = holdNoteGO.GetComponent<Note>();
+            newNote.lane = note.lane;
         }
+        //Time.timeScale = 0f;
     }
 
     public GameObject InstantiateGO(TouchType touchType, Vector3 position)
@@ -79,11 +80,13 @@ public class GameManager : Singleton<GameManager>
     {
         while (true)
         {
-            float nextNoteRealtimeHit = Utility.TimePositionToRealtime(map.notes[currentObjectIndex].timePosition, bpm);
+            float nextNoteRealtimeHit = Utility.TimePositionToRealtime(map.notes[currentObjectIndex].timePosition, bpm, song.offset);
+            float actualSpawnDistance;
             //Debug.Log($"next note rt hit: {nextNoteRealtimeHit}");
-            if (Utility.ShouldInstantiateNote(nextNoteRealtimeHit, currentTrackTime, approachRate))
+            if (Utility.ShouldInstantiateNote(nextNoteRealtimeHit, currentTrackTime, out actualSpawnDistance))
             {
-                CreateNote(map.notes[currentObjectIndex]);
+                CreateNote(map.notes[currentObjectIndex], actualSpawnDistance, nextNoteRealtimeHit);
+                //Debug.Log($"next note rt hit : {nextNoteRealtimeHit}");
                 currentObjectIndex++;
                 break;
             }
@@ -94,11 +97,26 @@ public class GameManager : Singleton<GameManager>
         }
     }
 
+    private void CreateNote(NoteStruct noteStruct, float actualSpawnDistance, float realtimeHit)
+    {
+        Vector3 tempSpawn = new Vector3(noteStruct.lane * 15f/7, 0f, actualSpawnDistance); //spawnPosition + new Vector3(,0f,0f);
+        GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.Euler(90,0,0));
+        //noteGO.transform.Rotate(90f,0,0);
+        Note note = noteGO.GetComponent<Note>();
+        note.lane = noteStruct.lane;
+        note.realtimeHit = realtimeHit;
+        note.duration = noteStruct.duration;
+        float lengthScale = Utility.GetBaseTimeUnit(song.bpm) * Utility.baseSpeed * approachRate * 1f;
+        GenerateHoldNote(note, lengthScale, true);
+        currentNotes.Add(note);
+        //add correction
+    }
+
     private void PlaySong()
     {
         isPlaying = true;
         hasSongStarted = false;
-        currentTrackTime = -3f;
+        currentTrackTime = -5f;
         currentObjectIndex = 0;
     }
 
@@ -107,6 +125,7 @@ public class GameManager : Singleton<GameManager>
         //Debug.Log($"play");
         hasSongStarted = true;
         AudioManager.Instance.Play("anime song");
+        //Debug.Log($"{Time.time}");
     }
 
     private void StopSong()
@@ -115,19 +134,7 @@ public class GameManager : Singleton<GameManager>
         isPlaying = false;
     }
 
-    private void CreateNote(NoteStruct noteStruct)
-    {
-        Vector3 tempSpawn = new Vector3(noteStruct.lane * 15f/7, 0f, spawnDistance); //spawnPosition + new Vector3(,0f,0f);
-        GameObject noteGO = Instantiate(notePrefab, tempSpawn, Quaternion.Euler(90,0,0));
-        //noteGO.transform.Rotate(90f,0,0);
-        Note note = noteGO.GetComponent<Note>();
-        note.lane = noteStruct.lane;
-        note.duration = noteStruct.duration;
-        float lengthScale = Utility.baseSpeed * approachRate * 1.5f;
-        GenerateHoldNote(note, lengthScale, true);
-        currentNotes.Add(note);
-        //add correction
-    }
+
 
     private GameObject TouchTypeToGO(TouchType touchType)
     {
