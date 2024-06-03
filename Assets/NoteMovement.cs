@@ -16,7 +16,7 @@ public class NoteMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        boundary = -50f;
+        boundary = -10f;
         note = GetComponent<Note>();
         isDebugged = false;
     }
@@ -31,7 +31,7 @@ public class NoteMovement : MonoBehaviour
 
         if (transform.position.z < 0 && !isDebugged)
         {
-            Debug.Log($"actual time: {Time.time-4.98f}, expected hit time: {note.realtimeHit}");
+            //Debug.Log($"actual time: {Time.time-4.98f}, expected hit time: {note.realtimeHit}");
             isDebugged = true;
         }
 
