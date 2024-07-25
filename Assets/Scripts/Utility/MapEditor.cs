@@ -34,5 +34,13 @@ public class MapEditor : EditorWindow
         {
             MapCache.Instance.GenerateHoldNotes();
         }
+        /* if (GUILayout.Button("timescale"))
+        {
+           
+            int timeInt = (int) Mathf.Floor(Time.timeScale * 2);
+            timeInt = (timeInt + 1) % 4;
+            Time.timeScale = 0.5f * timeInt;
+            Debug.Log(Time.timeScale);
+        } */
     }
 }

@@ -10,6 +10,7 @@ public class Note : MonoBehaviour
     public int duration = 0;
     public int slide = 0;
     public float realtimeHit;
+    public string hitsound;
 
     public void DestroyNote()
     {

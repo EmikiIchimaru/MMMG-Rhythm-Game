@@ -102,6 +102,8 @@ MonoBehaviour:
   touchType: 0
   duration: 0
   slide: 0
+  realtimeHit: 0
+  hitsound: hitnormal
 --- !u!114 &9054644270286983720
 MonoBehaviour:
   m_ObjectHideFlags: 0

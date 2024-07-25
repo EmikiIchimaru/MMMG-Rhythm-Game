@@ -43,13 +43,20 @@ public class PlayManager : Singleton<PlayManager>
         foreach (Note note in GameManager.Instance.currentNotes)
         {
             if (touchedLane != note.lane) { continue; }
-            if (note.transform.position.z > 15f) { continue; }
+            if (note.transform.position.z > 10f) { continue; }
             if (touchType == note.touchType)
             {
-                Debug.Log($"Hit");
+                //Debug.Log($"Hit");
+                HandleTiming(note);
                 note.DestroyNote();
                 break;
             }
         }
+    }
+
+    void HandleTiming(Note note)
+    {
+        AudioManager.Instance.Play(note.hitsound);
+        Debug.Log(GameManager.Instance.currentTrackTime-note.realtimeHit);
     }
 }
