@@ -23,7 +23,22 @@ MonoBehaviour:
     duration: 0
     slide: 0
     touchType: 0
+  - lane: 1
+    timePosition: 2
+    duration: 0
+    slide: 0
+    touchType: 0
   - lane: 0
+    timePosition: 2
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 2
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
     timePosition: 2
     duration: 0
     slide: 0
@@ -114,6 +129,11 @@ MonoBehaviour:
     slide: 0
     touchType: 0
   - lane: 3
+    timePosition: 44
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
     timePosition: 44
     duration: 0
     slide: 0

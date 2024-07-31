@@ -48,6 +48,7 @@ public class PlayManager : Singleton<PlayManager>
             {
                 //Debug.Log($"Hit");
                 HandleTiming(note);
+                VFXManager.Instance.HitVFX(new Vector3(0,0,0));
                 note.DestroyNote();
                 break;
             }
@@ -57,6 +58,7 @@ public class PlayManager : Singleton<PlayManager>
     void HandleTiming(Note note)
     {
         AudioManager.Instance.Play(note.hitsound);
+
         Debug.Log(GameManager.Instance.currentTrackTime-note.realtimeHit);
     }
 }
