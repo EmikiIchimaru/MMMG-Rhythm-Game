@@ -25,7 +25,7 @@ public class GameManager : Singleton<GameManager>
     void Start()
     {
         isPlaying = false;
-        PlaySong();
+        PlayLevel();
     }
 
     // Update is called once per frame
@@ -112,7 +112,7 @@ public class GameManager : Singleton<GameManager>
         //add correction
     }
 
-    private void PlaySong()
+    private void PlayLevel()
     {
         isPlaying = true;
         hasSongStarted = false;
