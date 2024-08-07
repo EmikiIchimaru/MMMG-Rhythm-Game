@@ -116,7 +116,7 @@ public class GameManager : Singleton<GameManager>
     {
         isPlaying = true;
         hasSongStarted = false;
-        currentTrackTime = -5f;
+        currentTrackTime = -3f;
         currentObjectIndex = 0;
     }
 
@@ -124,7 +124,7 @@ public class GameManager : Singleton<GameManager>
     {
         //Debug.Log($"play");
         hasSongStarted = true;
-        AudioManager.Instance.Play("anime song");
+        AudioManager.Instance.Play(song.songName);
         //Debug.Log($"{Time.time}");
     }
 
