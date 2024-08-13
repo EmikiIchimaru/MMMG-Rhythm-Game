@@ -14,6 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/PlayScene.unity
     guid: a08c8654757bfae44ae81769ea3fa41c
+  - enabled: 1
+    path: Assets/Scenes/Song3Hard.unity
+    guid: b7d5b446a82710c40918fc77d1a45e75
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 13c11c90018b0de4698c0f537c373c31,
       type: 2}
