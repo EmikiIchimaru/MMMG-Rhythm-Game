@@ -59,12 +59,12 @@ public class MapCache : Singleton<MapCache>
             Transform child = transform.GetChild(i);        
             
             int intLane = (int) ((child.position.x + xOffset)/spacing);
-            int intTime = (int) ((child.position.z)/spacing);
+            float floatTime = (child.position.z)/spacing;
             Note note = child.GetComponent<Note>();
             TouchType touchType = note.touchType;
             int intDuration = note.duration;
             int intSlide = note.slide;
-            tempNotes[i] = new NoteStruct(intLane, intTime, touchType, intDuration, intSlide);
+            tempNotes[i] = new NoteStruct(intLane, floatTime, touchType, intDuration, intSlide);
         }
         //use system linq to sort the array
         tempNotes = tempNotes.OrderBy(note => note.timePosition).ToArray();

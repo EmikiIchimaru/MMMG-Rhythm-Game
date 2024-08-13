@@ -19,6 +19,11 @@ MonoBehaviour:
     slide: 0
     touchType: 0
   - lane: -2
+    timePosition: 0.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
     timePosition: 1
     duration: 2
     slide: 0
@@ -88,27 +93,27 @@ MonoBehaviour:
     duration: 0
     slide: 0
     touchType: 0
-  - lane: -2
+  - lane: -3
     timePosition: 29
-    duration: 0
+    duration: 1
     slide: 0
     touchType: 0
-  - lane: 0
+  - lane: 2
     timePosition: 30
     duration: 0
     slide: 0
     touchType: 0
-  - lane: 0
+  - lane: 2
     timePosition: 30
     duration: 0
     slide: 0
     touchType: 0
-  - lane: -1
+  - lane: 2
     timePosition: 31
     duration: 0
     slide: 0
     touchType: 0
-  - lane: 3
+  - lane: -1
     timePosition: 32
     duration: 1
     slide: 0
@@ -348,12 +353,7 @@ MonoBehaviour:
     duration: 1
     slide: 0
     touchType: 0
-  - lane: 0
-    timePosition: 94
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
+  - lane: -1
     timePosition: 94
     duration: 0
     slide: 0

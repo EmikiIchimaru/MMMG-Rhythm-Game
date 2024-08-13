@@ -22,7 +22,7 @@ public static class Utility
         return 30f / bpm;
     }
 
-    public static float TimePositionToRealtime(int timePos, float bpm, float offset)
+    public static float TimePositionToRealtime(float timePos, float bpm, float offset)
     {
         return timePos * 30f / bpm + offset;
     }
