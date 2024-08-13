@@ -2378,7 +2378,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Song 2
+  m_text: Haru
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b771bce9e8a6f0a44bf568f71330deed, type: 2}
   m_sharedMaterial: {fileID: -9179090883048814879, guid: b771bce9e8a6f0a44bf568f71330deed,
