@@ -13,28 +13,88 @@ MonoBehaviour:
   m_Name: new map
   m_EditorClassIdentifier: 
   notes:
-  - lane: 0
+  - lane: 3
     timePosition: 2
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 2
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 3
     duration: 0
     slide: 0
     touchType: 0
   - lane: 1
-    timePosition: 2
+    timePosition: 3
     duration: 0
     slide: 0
     touchType: 0
-  - lane: 0
+  - lane: 2
     timePosition: 4
     duration: 0
     slide: 0
     touchType: 0
-  - lane: 0
+  - lane: -2
+    timePosition: 4
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
     timePosition: 6
     duration: 0
     slide: 0
     touchType: 0
-  - lane: 0
+  - lane: 1
+    timePosition: 6
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 7
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 7
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
     timePosition: 8
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 8
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 9
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 9
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 9
     duration: 0
     slide: 0
     touchType: 0
@@ -44,7 +104,37 @@ MonoBehaviour:
     slide: 0
     touchType: 0
   - lane: 0
+    timePosition: 10
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 11
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 11
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
     timePosition: 12
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 12
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 13
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 13
     duration: 0
     slide: 0
     touchType: 0
@@ -54,127 +144,7 @@ MonoBehaviour:
     slide: 0
     touchType: 0
   - lane: 0
-    timePosition: 16
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 18
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 20
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 22
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 24
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 26
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 28
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 30
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 32
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 34
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 36
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 38
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 40
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 42
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 44
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 46
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 48
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 50
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 52
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 54
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 56
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 58
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 60
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 62
-    duration: 0
-    slide: 0
-    touchType: 0
-  - lane: 0
-    timePosition: 64
+    timePosition: 14
     duration: 0
     slide: 0
     touchType: 0

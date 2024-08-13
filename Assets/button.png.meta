@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: cf91751ff0351474f9a53c5720a5488c
+guid: ad3486348422a59478cda1aa2c3914b8
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ezgif-2-fa3b34bbd0-removebg-preview (2)_0
+      name: button_0
       rect:
         serializedVersion: 2
         x: 31
@@ -124,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e168d49aea252648a759b7eb8d695b4
-      internalID: 198306145
+      spriteID: 126111ec2b82b1046960ef91d551de13
+      internalID: -475753060
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif-2-fa3b34bbd0-removebg-preview (2)_1
+      name: button_1
       rect:
         serializedVersion: 2
-        x: 259
+        x: 253
         y: 50
-        width: 200
+        width: 206
         height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -145,14 +145,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c60234d63b4f2fa4ebce0b7632dbd153
-      internalID: -727747526
+      spriteID: 8a10363f7517f244e8a1099052a834dd
+      internalID: 852286748
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif-2-fa3b34bbd0-removebg-preview (2)_2
+      name: button_2
       rect:
         serializedVersion: 2
         x: 488
@@ -166,14 +166,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b62bba372d9f1df45bd622625d8aa895
-      internalID: -1666725399
+      spriteID: 30ee7dc1ebdb7e84994f7635de5d5234
+      internalID: 374213185
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif-2-fa3b34bbd0-removebg-preview (2)_3
+      name: button_3
       rect:
         serializedVersion: 2
         x: 283
@@ -187,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 71701960a50322848bebaf21ac4ab3aa
-      internalID: -1942389749
+      spriteID: 6ac45b1edb8a4c94e9b5a7350ac94814
+      internalID: 1685623221
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif-2-fa3b34bbd0-removebg-preview (2)_4
+      name: button_4
       rect:
         serializedVersion: 2
         x: 376
@@ -208,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c1e2c74539c099341a74993ba29f32c4
-      internalID: -1586666112
+      spriteID: 3f39add43f07aa044ae27f64accde4e4
+      internalID: 619650426
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif-2-fa3b34bbd0-removebg-preview (2)_5
+      name: button_5
       rect:
         serializedVersion: 2
         x: 389
@@ -229,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bbed24fed590ed246809d8a1a26a9508
-      internalID: 658380454
+      spriteID: ba9b12017717d894f8f64d0ded97e25c
+      internalID: 606804693
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif-2-fa3b34bbd0-removebg-preview (2)_6
+      name: button_6
       rect:
         serializedVersion: 2
         x: 394
@@ -250,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d24dd71dca0cadf4686bd420472a5585
-      internalID: -91564785
+      spriteID: 3d96222256abbfc489615a2a0bd06533
+      internalID: 603414202
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ezgif-2-fa3b34bbd0-removebg-preview (2)_7
+      name: button_7
       rect:
         serializedVersion: 2
         x: 400
@@ -271,8 +271,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1632f0a54a0fad14398417509d165926
-      internalID: -403209417
+      spriteID: 73e1633d05c83854ebba6b496e4a1a2a
+      internalID: 154496395
       vertices: []
       indices: 
       edges: []
@@ -280,7 +280,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 61cf93b5996698b4ba08b9af602a0239
+    spriteID: 618ff42e2afaa6149b948970643e72c4
     internalID: 0
     vertices: []
     indices: 
@@ -288,14 +288,14 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      ezgif-2-fa3b34bbd0-removebg-preview (2)_0: 198306145
-      ezgif-2-fa3b34bbd0-removebg-preview (2)_1: -727747526
-      ezgif-2-fa3b34bbd0-removebg-preview (2)_2: -1666725399
-      ezgif-2-fa3b34bbd0-removebg-preview (2)_3: -1942389749
-      ezgif-2-fa3b34bbd0-removebg-preview (2)_4: -1586666112
-      ezgif-2-fa3b34bbd0-removebg-preview (2)_5: 658380454
-      ezgif-2-fa3b34bbd0-removebg-preview (2)_6: -91564785
-      ezgif-2-fa3b34bbd0-removebg-preview (2)_7: -403209417
+      button_0: -475753060
+      button_1: 852286748
+      button_2: 374213185
+      button_3: 1685623221
+      button_4: 619650426
+      button_5: 606804693
+      button_6: 603414202
+      button_7: 154496395
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
