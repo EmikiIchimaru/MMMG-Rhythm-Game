@@ -17,4 +17,4 @@ MonoBehaviour:
   map: {fileID: 11400000, guid: 5160c0ac1c97ddc48a75135a5429d7a1, type: 2}
   duration: 90
   bpm: 166
-  offset: 0.583
+  offset: 0.683
