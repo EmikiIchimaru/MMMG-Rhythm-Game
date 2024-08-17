@@ -4,14 +4,14 @@ using UnityEngine;
 public class NoteStruct
 {
     public int lane;
-    public int timePosition;
+    public float timePosition;
     public int duration;
     public int slide;
 
     [HideInInspector] public TouchType touchType;
 
     // Constructor to initialize the fields
-    public NoteStruct(int lane, int timePosition, TouchType touchType, int duration, int slide)
+    public NoteStruct(int lane, float timePosition, TouchType touchType, int duration, int slide)
     {
         this.lane = lane;
         this.timePosition = timePosition;

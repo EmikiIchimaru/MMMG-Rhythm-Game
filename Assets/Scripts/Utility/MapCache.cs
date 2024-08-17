@@ -10,7 +10,7 @@ public class MapCache : Singleton<MapCache>
 
     private float xOffset = 30f;
 
-    private float spacing = 2f;
+    private readonly float spacing = 2f;
 
     [SerializeField] private GameObject notePrefab;
     [SerializeField] private GameObject holdPrefab;
@@ -59,24 +59,21 @@ public class MapCache : Singleton<MapCache>
             Transform child = transform.GetChild(i);        
             
             int intLane = (int) ((child.position.x + xOffset)/spacing);
-            int intTime = (int) ((child.position.z)/spacing);
+            float floatTime = (child.position.z)/spacing;
             Note note = child.GetComponent<Note>();
             TouchType touchType = note.touchType;
             int intDuration = note.duration;
             int intSlide = note.slide;
-            tempNotes[i] = new NoteStruct(intLane, intTime, touchType, intDuration, intSlide);
+            tempNotes[i] = new NoteStruct(intLane, floatTime, touchType, intDuration, intSlide);
         }
         //use system linq to sort the array
         tempNotes = tempNotes.OrderBy(note => note.timePosition).ToArray();
-        // Create a new instance of the ScriptableObject
-        Map newMap = ScriptableObject.CreateInstance<Map>();
-
-        newMap.notes = tempNotes;
         
-        // Save the duplicate as a new asset (optional)
-        string path = "Assets/new map.asset";
-        AssetDatabase.CreateAsset(newMap, path);
-        AssetDatabase.SaveAssets(); 
+        map.notes = tempNotes;
+        EditorUtility.SetDirty(map);
+    
+        // Save all unsaved assets to ensure the changes persist
+        AssetDatabase.SaveAssets();
     
     }
 

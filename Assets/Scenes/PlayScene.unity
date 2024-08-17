@@ -639,7 +639,7 @@ MonoBehaviour:
     source: {fileID: 0}
   - name: haru
     clip: {fileID: 8300000, guid: 16ae843b1bf1e21419f1735a53f704de, type: 3}
-    volume: 0.5
+    volume: 1
     source: {fileID: 0}
   - name: hitnormal
     clip: {fileID: 8300000, guid: 93f273421cdb51740ba24cdebfc9d717, type: 3}

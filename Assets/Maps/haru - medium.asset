@@ -1,0 +1,1560 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 943987e8506ed3741addcfa8d6d6b5df, type: 3}
+  m_Name: haru - medium
+  m_EditorClassIdentifier: 
+  notes:
+  - lane: -2
+    timePosition: 0
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 1
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 4
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 5
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 8
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 9
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 12
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 13
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 16
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 17
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 20
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 21
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 24
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 25
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 28
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 29
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 30
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 30
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 31
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 32
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 34
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 35
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 36
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 38
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 39
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 39.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 40
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 41
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 43
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 45
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 46
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 47
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 48
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 50
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 51
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 52
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 54
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 55
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 55.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 56
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 57
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 57
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 59
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 61
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 62
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 63
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 63.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 64
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 65
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 66
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 67
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 68
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 69
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 70
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 71
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 71.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 72
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 73
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 75
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 76
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 77
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 77
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 78.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 79
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 80
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 81
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 81
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 83
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 85
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 87
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 87.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 88
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 89
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 91
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 91
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 93
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 94
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 95
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 96
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 98
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 99
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 100
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 102
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 103
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 103.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 104
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 105
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 105
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 107
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 109
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 110
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 111
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 112
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 114
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 115
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 116
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 118
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 119
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 119.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 120
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 121
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 121
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 123
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 125
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 126
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 127
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 128
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 130
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 131
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 132
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 134
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 135
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 135.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 136
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 137
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 137
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 139
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 140
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 141
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 141
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 143
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 144
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 145
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 145
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 147
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 148
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 149
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 149.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 150.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 151
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 151.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 152.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 153
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 154
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 154.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 155.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 156
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 157
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 157.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 158.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 159
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 159.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 160
+    duration: 3
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 166
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 166
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 168
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 169.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 170
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 171.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 172
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 173.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 174
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 174
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 176
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 176
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 181
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 181
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 182
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 182
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 183
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 183
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 184
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 184
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 185.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 186
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 187
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 187.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 188
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 189
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 189.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 190
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 191
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 191
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 193.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 194
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 195
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 195.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 196.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 196.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 197
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 197
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 198
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 200
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 200
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 201.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 202
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 202
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 203.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 204
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 204
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 205.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 206
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 207
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 208
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 208
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 209
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 209
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 210
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 210
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 211
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 211
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 213
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 214
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 215
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 217
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 218
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 219
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 221
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 222
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 224
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 225
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 225.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 226
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 226.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 227
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 227.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 228
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 228.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 229
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 229.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 230
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 231
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 231.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 232
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 233.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 234
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 235.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 236
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 237.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 238
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 238
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 239
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 239.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 240
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 240
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 241
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 241
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 241.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 242
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 242.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 243
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 243.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 244
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 244.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 245
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 245.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 246
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 246.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 247
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 247.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 248
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 249.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 250
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 251
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 252
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 253
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 254
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 254
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 255
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 255
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 256
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 256.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 257
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 257.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 258
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 258.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 259
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 259.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 259.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 260.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 261
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 261
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 262
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 264
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 264
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 265.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 266
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 266
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 267.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 268
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 268
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 269.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 270
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 271
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 272
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 272
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 273
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 273
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 274
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 274
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 1
+    timePosition: 275
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 277
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: -1
+    timePosition: 279
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 280
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 281
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 282
+    duration: 1
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 284
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 285
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 286
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 286.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 287
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 3
+    timePosition: 287.5
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -3
+    timePosition: 288
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 289
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 292
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: -2
+    timePosition: 293
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 296
+    duration: 0
+    slide: 0
+    touchType: 0
+  - lane: 2
+    timePosition: 297
+    duration: 2
+    slide: 0
+    touchType: 0
+  - lane: 0
+    timePosition: 300
+    duration: 0
+    slide: 0
+    touchType: 0
