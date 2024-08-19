@@ -9,27 +9,22 @@ public class PlayManager : Singleton<PlayManager>
         TouchType touchType = TouchType.None;
         bool isValid;
         int touchedLane = Utility.LocalPointToLane(screenPoint, out isValid);
-        if (!isValid) 
-        { 
+        if (!isValid)
+        {
             Debug.Log("Touch is not in panel");
-            return; 
+            return;
         }
-        //Debug.Log($"Lane: {touchedLane}");
+
         switch (touch.phase)
         {
             case TouchPhase.Began:
                 touchType = TouchType.Tap;
-                //Debug.Log($"PlayerInput: {touchIndex}, {touchedLane}, {touchType}, {GameManager.Instance.currentTrackTime}");
                 break;
             case TouchPhase.Stationary:
-                touchType = TouchType.Hold;
-                break;
             case TouchPhase.Moved:
                 touchType = TouchType.Hold;
                 break;
             case TouchPhase.Ended:
-                touchType = TouchType.End;
-                break;
             case TouchPhase.Canceled:
                 touchType = TouchType.End;
                 break;
@@ -43,13 +38,11 @@ public class PlayManager : Singleton<PlayManager>
         foreach (Note note in GameManager.Instance.currentNotes)
         {
             if (touchedLane != note.lane) { continue; }
-            if (note.transform.position.z > 10f) { continue; }
+            if (note.transform.position.z > 10f) { continue; } // Skip notes too far away
             if (touchType == note.touchType)
             {
-                //Debug.Log($"Hit");
                 HandleTiming(note);
                 VFXManager.Instance.HitVFX(note.transform.position);
-                note.DestroyNote();
                 break;
             }
         }
@@ -59,6 +52,14 @@ public class PlayManager : Singleton<PlayManager>
     {
         AudioManager.Instance.Play(note.hitsound);
 
-        Debug.Log(GameManager.Instance.currentTrackTime-note.realtimeHit);
+        float hitTiming = GameManager.Instance.currentTrackTime - note.realtimeHit;
+        Debug.Log($"Hit Timing: {hitTiming}");
+
+        // Pass hit timing to ScoreManager
+        ScoreManager scoreManager = FindObjectOfType<ScoreManager>();
+        if (scoreManager != null)
+        {
+            scoreManager.OnNoteHit(GameManager.Instance.currentTrackTime, note.realtimeHit);
+        }
     }
 }

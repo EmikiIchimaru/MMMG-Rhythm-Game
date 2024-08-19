@@ -45505,6 +45505,8 @@ MonoBehaviour:
   tailPrefab: {fileID: 3187025421824098991, guid: 36f5ced0a1679b4498dc484b68e1a776,
     type: 3}
   currentNotes: []
+  scoreManager: {fileID: 4803698340902788669, guid: 0f665d2b37febcc4789c5dc90b5677d0,
+    type: 3}
 --- !u!4 &2009589294
 Transform:
   m_ObjectHideFlags: 0
