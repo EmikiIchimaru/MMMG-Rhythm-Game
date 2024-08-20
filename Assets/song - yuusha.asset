@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 105f8774e826570499b4cb843f6d5d41, type: 3}
-  m_Name: song - Haru
+  m_Name: song - yuusha
   m_EditorClassIdentifier: 
-  songName: haru
+  songName: yuusha
   difficultyName: 
-  map: {fileID: 11400000, guid: 8666157a3161d144e9f87ccfcc48461f, type: 2}
-  duration: 95
-  bpm: 102
-  offset: 0.977
+  map: {fileID: 11400000, guid: f422042beab21034186b6dc5ce260cce, type: 2}
+  duration: 79
+  bpm: 50
+  offset: 0.789

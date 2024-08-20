@@ -513,12 +513,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sounds:
-  - name: kokoro
-    clip: {fileID: 8300000, guid: 8954c8a91100bb84e9dfee53b556471e, type: 3}
-    volume: 0.3
-    source: {fileID: 0}
-  - name: haru
-    clip: {fileID: 8300000, guid: 16ae843b1bf1e21419f1735a53f704de, type: 3}
+  - name: yuusha
+    clip: {fileID: 8300000, guid: 41ba4dd4d710e3c42aab0e06d0c68a47, type: 3}
     volume: 1
     source: {fileID: 0}
   - name: hitnormal
@@ -1062,7 +1058,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c21f6aa69137d84b88a6d7631bea61b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  map: {fileID: 11400000, guid: 84557fa113afb824caab89d28b0d10e5, type: 2}
+  map: {fileID: 11400000, guid: f422042beab21034186b6dc5ce260cce, type: 2}
   notePrefab: {fileID: 3187025421824098991, guid: dbe8ace92a494c74389dc440200818fd,
     type: 3}
   holdPrefab: {fileID: 0}
@@ -1309,10 +1305,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f44b8bafc2ec54495c00c7c7d48ec2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  song: {fileID: 11400000, guid: f2bcdba1312d91c4c866904739c345b2, type: 2}
-  approachRate: 1
+  song: {fileID: 11400000, guid: f4d8f3496ab8d9449917fe036003319a, type: 2}
+  approachRate: 0.7
   spawnDistance: 50
-  isPlaying: 1
+  isPlaying: 0
   currentTrackTime: 0
   notePrefab: {fileID: 3187025421824098991, guid: dbe8ace92a494c74389dc440200818fd,
     type: 3}
