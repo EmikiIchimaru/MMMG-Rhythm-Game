@@ -469,7 +469,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: Song1Easy
+          m_StringArgument: Yuusha
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &1163921861
@@ -1326,7 +1326,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -498, y: 40}
+  m_AnchoredPosition: {x: -561, y: -3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1754939492
@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Song 1
+  m_text: Yuusha
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: b771bce9e8a6f0a44bf568f71330deed, type: 2}
   m_sharedMaterial: {fileID: -9179090883048814879, guid: b771bce9e8a6f0a44bf568f71330deed,
