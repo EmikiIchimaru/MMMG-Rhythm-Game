@@ -21,7 +21,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Song2Medium.unity
     guid: 5c1bf1449b2533041a5e1173ab60ade7
   m_configObjects:
+    com.unity.adaptiveperformance.google.android.provider_settings: {fileID: 11400000,
+      guid: e143b3fbdadfbb34b83c789d47742846, type: 2}
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 13c11c90018b0de4698c0f537c373c31,
       type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: 1c451ef5bb6321f499fa3adfd00176bd, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 7cce365d9dea49642b5e631cb22617d9, type: 2}
