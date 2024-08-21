@@ -18,10 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Idol Gameplay.unity
     guid: b7d5b446a82710c40918fc77d1a45e75
   - enabled: 1
-    path: Assets/Scenes/Song2Medium.unity
+    path: Assets/Scenes/Haru.unity
     guid: 5c1bf1449b2533041a5e1173ab60ade7
   m_configObjects:
     com.unity.adaptiveperformance.loader_settings: {fileID: 11400000, guid: 13c11c90018b0de4698c0f537c373c31,
       type: 2}
+    com.unity.adaptiveperformance.samsung.android.provider_settings: {fileID: 11400000,
+      guid: fafd84819ec23bc44aab452a1d9049b7, type: 2}
     com.unity.adaptiveperformance.simulator.provider_settings: {fileID: 11400000,
       guid: 7cce365d9dea49642b5e631cb22617d9, type: 2}
